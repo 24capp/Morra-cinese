@@ -1,0 +1,91 @@
+import java.util.Scanner;
+import java.lang.String;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		/*Scrivere un programma che chieda agli utenti due stringhe in ingresso, 
+		 * le stringhe possono valere solo: “carta”, “forbice” o “sasso”. 
+		 * Il programma dovrà quindi effettuare i dovuti controlli e dichiarare il vincitore secondo le note regole della “morra cinese” 
+		 * (forbice vince su carta, carta vince su sasso, sasso vince su forbice).
+		 */
+		
+		
+	System.out.println("Stai per giocare a morra cinese");
+	
+	
+	//MANO GIOCATORE 1
+	System.out.println("Mossa giocatore 1");
+	Scanner mossaUno = new Scanner(System.in);
+	String manoUno = mossaUno.nextLine();
+	manoUno = manoUno.toLowerCase();
+	
+	switch (manoUno){
+		case "carta":
+			System.out.println("Hai selezionato carta");
+		break;
+		
+		case "sasso":
+			System.out.println("Hai selezionato sasso");
+		break;
+		
+		case "forbice":
+			System.out.println("Hai selezionato forbice");
+		break;
+		
+		default:
+			System.out.println("Hai sbagliato mossa");
+			System.exit(0);
+	}
+	
+	
+	//MANO GIOCATORE 2 	
+	System.out.println("Mossa giocatore 2");
+	Scanner mossaDue = new Scanner(System.in);
+	String manoDue = mossaDue.nextLine();
+	manoDue = manoDue.toLowerCase();
+	
+	switch (manoDue){
+		case "carta":
+			System.out.println("Hai selezionato carta");
+		break;
+		
+		case "sasso":
+			System.out.println("Hai selezionato sasso");
+		break;
+		
+		case "forbice":
+			System.out.println("Hai selezionato forbice");
+		break;
+		
+		default:
+			System.out.println("Hai sbagliato mossa");
+			System.exit(0);
+	}
+		
+		
+
+	if (manoUno.equals(manoDue))
+		System.out.println("Pareggio");
+	
+	else if (manoUno.equals ("carta") && manoDue.equals("sasso"))  ;
+    else if(manoUno.equals ("sasso") && manoDue.equals("forbice"))  ;
+	else if(manoUno.equals ("forbice") && manoDue.equals("carta")) ;
+           System.out.println("Vince giocatore 1");
+           
+	
+           else 
+		System.out.println("Vince giocatore 2");
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+     }
+  }
